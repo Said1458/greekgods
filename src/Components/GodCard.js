@@ -33,7 +33,7 @@ function GodCard (props) {
         margin: 0px auto;
         font-weight: 500;
     `
-    console.log(props)
+    //console.log(props)
 
     return(
     <div className="GodCard">
