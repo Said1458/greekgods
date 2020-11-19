@@ -1,9 +1,11 @@
+
 import React from 'react';
 import { GodsArray } from './Components/InternalData.js';
 import axios from 'axios';
+import Message from './Components/Message/Message';
+import './App.css';
 
-
-
+      
 
 
 class App extends React.Component {
@@ -14,20 +16,14 @@ class App extends React.Component {
       data: null
 
     }
-  }
-
-
-
-
-
-  
-  
  
 render(){
 
   return(
     <div>
       this is app
+
+    <Message />
     </div>
   )
 }
