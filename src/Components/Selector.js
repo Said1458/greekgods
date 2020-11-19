@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Select from 'react-select'
+import Select from 'react-select';
 
 
 const options = [
@@ -66,10 +66,9 @@ class Selector extends React.Component {
 
     constructor(props) {
       super(props);
-      this.state = {
-        problem: ''
+      this.state = {value: ""}
       };
-    }
+    
 
     render() {
       return (
@@ -78,11 +77,14 @@ class Selector extends React.Component {
         What do you need help with?
           </div>
         <form>
-        <Select options={optionsSorted} value={this.state.problem}/>
+        <Select options={optionsSorted}   onChange={(event)=>{
+               console.log("event", event.value); 
+               this.setState({value:event})
+              }} />
         </form>
         </div>
       );
     }
   }
   
-  export default Selector
+  export default Selector;
