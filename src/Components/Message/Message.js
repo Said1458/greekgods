@@ -36,12 +36,17 @@ function Massage() {
         color: #9EFFEA;
     `
 
+    const Description = styled.p`
+        max-width: 1000px;
+        `
+
     return (
         <div className="Message" style={{backgroundColor: "#1F2322", color: "#fff", textAlign: "center", display: "flex"}}>
             <div style={imageStyle}></div>
             <div className="wraper" style={{padding: "24px 24px 24px 4px"}} >
             <H2>{god.name}</H2>
             <p>{god.power}</p>
+            <p>She is the goddess of women, marriage, family and …he is the daughter of the Titans Cronus and Rhea.</p>
                 <form>
                     <label>
                         Name:
