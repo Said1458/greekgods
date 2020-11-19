@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components'
 
 const god =  
     {  
@@ -13,35 +14,55 @@ const god =
 
 function Massage() {
     const imageStyle = {
-        width: "100%",
+        width: "50%",
         height: "400px",
         background:`url(${god.img})`,
-
+        backgroundSize: "cover",
+        backgroundPosition: "center top",
+        margin: "28px 0"
     }
-    return (
-        <div className="Message">
-            <div style={imageStyle}></div>
-            <h2>{god.name}</h2>
-            <p>{god.power}</p>
-            <form>
 
-                <label>
-                    Name:
-                    <input type="text" name="name" />
-                </label>
-                <label>
-                    City:
-                    <input type="text" name="name" />
-                </label>
-                <label>
-                    Subject:
-                    <input type="text" name="name" />
-                </label>
-                <textarea>
-                    Message
-                </textarea>
-                <input type="submit" value="Submit" />
-            </form>
+    const Input = styled.input`
+        background: #9EFFEA;
+        border: none;
+        margin: 16px;
+        padding: 8px 16px;
+        color: #1F2322;
+    `
+    const H2 = styled.h2`
+        font-family: cinzel;
+        letter-spacing: 0.16px;
+        text-align: center;
+        color: #9EFFEA;
+    `
+
+    return (
+        <div className="Message" style={{backgroundColor: "#1F2322", color: "#fff", textAlign: "center", display: "flex"}}>
+            <div style={imageStyle}></div>
+            <div className="wraper" style={{padding: "24px 24px 24px 4px"}} >
+            <H2>{god.name}</H2>
+            <p>{god.power}</p>
+                <form>
+                    <label>
+                        Name:
+                        <input type="text" name="name" />
+                    </label><br/>
+                    <label>
+                        City:
+                        <input type="text" name="name" />
+                    </label><br/>
+                    <label>
+                        Subject:
+                        <input type="text" name="name" />
+                    </label><br/>
+                    <textarea>
+                        Message
+                    </textarea><br/>
+                    <Input type="submit" value="Submit" />
+                </form>
+
+            </div>
+            
 
 
         </div>
