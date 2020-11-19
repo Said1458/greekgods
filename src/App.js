@@ -1,6 +1,6 @@
 import React from 'react';
 import { GodsArray } from './Components/InternalData.js';
-import axios from 'axios';
+import GodsList from './Components/GodsList';
 
 
 
@@ -11,7 +11,7 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      data: null
+      data: GodsArray
 
     }
   }
@@ -19,15 +19,14 @@ class App extends React.Component {
 
 
 
+  
 
-  
-  
- 
 render(){
+  console.log(this.state.data)
 
   return(
     <div>
-      this is app
+      <GodsList godattributes={this.state.data} />
     </div>
   )
 }
