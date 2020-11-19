@@ -1,35 +1,28 @@
 import React from 'react';
 import Message from './Components/Message/Message'
+import Selector from './Components/Selector';
 import { GodsArray } from './Components/InternalData.js';
-import axios from 'axios';
-
-
-
-
+import GodsList from './Components/GodsList';
+import './App.css';
 
 class App extends React.Component {
 
   constructor() {
     super();
     this.state = {
-      data: null
+      data: GodsArray
 
     }
   }
 
-
-
-
-
-  
-  
- 
 render(){
+  console.log(this.state.data)
 
   return(
-    <div>
-      <Message />
-      this is app
+    <div className="App">
+        <GodsList godattributes={this.state.data} />
+        <Message />
+        <Selector />
     </div>
   )
 }
