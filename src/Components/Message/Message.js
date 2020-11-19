@@ -37,7 +37,7 @@ function Massage() {
     `
 
     const Description = styled.p`
-        max-width: 1000px;
+        max-width: 450px;
         `
 
     return (
@@ -46,7 +46,7 @@ function Massage() {
             <div className="wraper" style={{padding: "24px 24px 24px 4px"}} >
             <H2>{god.name}</H2>
             <p>{god.power}</p>
-            <p>She is the goddess of women, marriage, family and …he is the daughter of the Titans Cronus and Rhea.</p>
+            <Description>She is the goddess of women, marriage, family and …he is the daughter of the Titans Cronus and Rhea.</Description>
                 <form>
                     <label>
                         Name:

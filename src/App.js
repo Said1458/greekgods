@@ -10,22 +10,26 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      data: GodsArray
-
+      data: GodsArray,
+      search: ""
     }
   }
 
-render(){
-  console.log(this.state.data)
+  handleSearch(key) {
+    this.setState({ search: key })
+  }
 
-  return(
-    <div className="App">
+  render() {
+    console.log(this.state.data)
+
+    return (
+      <div className="App">
         <GodsList godattributes={this.state.data} />
         <Message />
-        <Selector />
-    </div>
-  )
-}
+        <Selector onSearch={(key) => { this.handleSearch(key) }} />
+      </div>
+    )
+  }
 }
 
 export default App;

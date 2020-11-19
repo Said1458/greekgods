@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Select from 'react-select';
-
+import {GodsArray} from './InternalData';
 
 const options = [
     { value: 'war', label: 'war' },
@@ -59,8 +59,23 @@ const options = [
 }
 
 let optionsSorted = options.sort(dynamicSort("label"))
+console.log("options", optionsSorted)
 
-console.log(optionsSorted)
+
+
+console.log("gods", GodsArray)
+
+const yourGod = GodsArray.reduce((acc, current) => {
+  const containsWar = () =>
+    Object.values(current).some((el) => `${el}`.includes("war"));
+  if (containsWar()) {
+    return [...acc, current];
+  }
+  return acc;
+}, []);
+console.log("your god", yourGod);
+
+
 
 class Selector extends React.Component {
 
@@ -68,7 +83,6 @@ class Selector extends React.Component {
       super(props);
       this.state = {value: ""}
       };
-    
 
     render() {
       return (

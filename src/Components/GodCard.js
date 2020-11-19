@@ -41,6 +41,7 @@ function GodCard (props) {
                 <div>
                     <CardTitle>{props.name}</CardTitle>
                     <PowerText>{props.power}</PowerText>
+                    <button> I need {props.name}'s help</button>
                 </div>
                 
             {/* <h1>{props.name}</h1> */}
@@ -49,10 +50,8 @@ function GodCard (props) {
             {/* <div style={{width: "400px", height: "300px",  backgroundSize: "cover", backgroundImage: `url(${props.img})`}}>
             <h1>{props.name}</h1>
             </div> */}
-       
-        {/* <h2>Powers: {props.power}</h2>
-        <h2>symbol: {props.symbol}</h2> */}
-    </div> 
+    </div>
+
     )
 }
 
