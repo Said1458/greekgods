@@ -14,7 +14,7 @@ export class Home extends Component {
     render() {
         return (
             <>
-            <div className="Container">
+            <div className="Container" >
                 <Title>TalariApp</Title>
             
             <Description>
@@ -28,7 +28,6 @@ export class Home extends Component {
                             and we will take care of the rest!</li>
                 </ul>
                 </p>
-                <br></br>
             <Link to="/select"> <h1>Get Started</h1> </Link>
             </Description>
             </div>
