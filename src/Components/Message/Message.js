@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Route, BrowserRouter as Router,Link} from "react-router-dom";
 import GetADuck from '../../Components/RandomDuck';
 import GodPage from '../GodPage';
 
@@ -18,7 +19,8 @@ class Massage extends React.Component {
     constructor(props) {
         super(props)
     }
-    
+
+   
 render() {
     const Message = styled.div`
         background-color: #131515;
@@ -30,7 +32,7 @@ render() {
     const imageStyle = {
         width: "50%",
         height: "93%",
-        background:`url(${god.img})`,
+        background:`url(${this.props.picture})`,
         backgroundSize: "cover",
         backgroundPosition: "center top",
         margin: "28px 0"
