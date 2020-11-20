@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Route, BrowserRouter as Router,Link} from "react-router-dom";
 
 function GodPage(props) {
     const handleSubmit = (event) => {
@@ -94,14 +95,8 @@ function GodPage(props) {
         
       }
     `
-
-    const Message = styled.div`
-        background-color: #131515;
-        height: 100vh;
-        color: #fff;
-        text-align: center; 
-        display: flex;
-    `
+      //console.log(props)
+    
     return (
     <>
         <H2>{props.god.name}</H2>
@@ -124,7 +119,7 @@ function GodPage(props) {
                 <Textarea /><br/>
             </FormLabels><br/>
                     
-            <Input type="submit" value="Submit" />
+            <Link ><Input type="submit" value="Submit" /></Link>
         </GodForm>
     </>
 

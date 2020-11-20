@@ -106,12 +106,14 @@ class Selector extends React.Component {
         backgroundColor: "#131515",
         margin: "auto",
 
+
+
         // control: () => ({
         //   // none of react-select's styles are passed to <Control />
         //   width: 200,
         // }),
         
-
+        
       }
       const H2 = styled.h2`
         font-family: cinzel;
@@ -126,7 +128,23 @@ class Selector extends React.Component {
           <H2>What do you need help with?</H2>
           <form>
             <div style={{width:"30%", margin:"auto"}}>
-              <Select styles={customStyles} options={optionsSorted} onChange={(event) => this.handleChange(event)}/>
+              <Select 
+              
+              theme={theme => ({
+                ...theme,
+                borderRadius: 0,
+                colors: {
+                  ...theme.colors,
+                  primary25: 'gray',
+                  primary: 'black',
+                  neutral80: `#fff`,
+                  neutral5: 'lightgray'
+                },
+              })}
+              styles={customStyles} 
+              options={optionsSorted} 
+              onChange={(event) => this.handleChange(event)}/>
+              
             </div>
         
         {/* the top one works!!!! */}

@@ -1,5 +1,6 @@
 import React from 'react';
-import styled from 'styled-components'
+import styled from 'styled-components';
+import { Route, BrowserRouter as Router,Link} from "react-router-dom";
 
 
 function GodCard (props) {
@@ -35,13 +36,18 @@ function GodCard (props) {
     `
     //console.log(props)
 
+
+        
     return(
     <div className="GodCard">
+        <Link to={`/contact/${props.name}`}>
             <CardImage>
+                
                 <div>
                     <CardTitle>{props.name}</CardTitle>
                     <PowerText>{props.power}</PowerText>
-                    {/* <button> I need {props.name}'s help</button> */}
+                    
+                    
                 </div>
                 
             {/* <h1>{props.name}</h1> */}
@@ -50,6 +56,7 @@ function GodCard (props) {
             {/* <div style={{width: "400px", height: "300px",  backgroundSize: "cover", backgroundImage: `url(${props.img})`}}>
             <h1>{props.name}</h1>
             </div> */}
+        </Link>
     </div>
 
     )
