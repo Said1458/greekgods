@@ -109,8 +109,4 @@ export let GodsArray = [
         description:" He is an Olympian deity in ancient Greek religion and mythology. Hermes is considered the herald of the gods.He is also considered the protector of human heralds, travellers, thieves, merchants, and orators."
     },
 
-
-
-
-
 ];

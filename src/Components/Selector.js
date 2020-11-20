@@ -41,6 +41,7 @@ const options = [
     { value: 'children', label: 'children' }
   ]
 
+  
   function dynamicSort(property) {
     var sortOrder = 1;
 
