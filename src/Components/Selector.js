@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import Select from 'react-select';
 import {GodsArray} from './InternalData';
+import GodsList from '../Components/GodsList';
+
 
 const options = [
     { value: 'war', label: 'war' },
@@ -63,7 +65,7 @@ console.log("options", optionsSorted)
 
 
 
-console.log("gods", GodsArray)
+//console.log("gods", GodsArray)
 
 const yourGod = GodsArray.reduce((acc, current) => {
   const containsWar = () =>
@@ -79,23 +81,35 @@ console.log("your god", yourGod);
 
 class Selector extends React.Component {
 
-    constructor(props) {
-      super(props);
-      this.state = {value: ""}
-      };
+  constructor(props) {
+    super(props);
+    this.state = {value: ""}
+  };
+  
+  handleChange(event) {
+    //console.log(event)
+    this.setState({ value: event.value })
+    // we don't really need a state here
+    this.props.onSearch(event.value)
+    console.log(this.state.value)
+  }
 
     render() {
+      console.log(this.props)
       return (
           <div>
           <div>
         What do you need help with?
           </div>
         <form>
+        <Select options={optionsSorted} onChange={(event) => this.handleChange(event)}/>
+        {/* the top one works!!!! */}
         <Select options={optionsSorted}   onChange={(event)=>{
                console.log("event", event.value); 
                this.setState({value:event})
               }} />
         </form>
+        <GodsList godattributes={this.props.godattributes} />
         </div>
       );
     }
