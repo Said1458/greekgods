@@ -22,9 +22,9 @@ export class Home extends Component {
                   
                <p> All it takes is 3 simple steps.
                     <ul>
-                        <li>Select the nature of your request.</li>
-                        <li>We will match you with the perfect god or goddess for your unique needs!</li>
-                        <li>Simply write a message to your god or goddess, select an optional sacrifice, 
+                        <li>1. Select the nature of your request.</li>
+                        <li>2. We will match you with the perfect god or goddess for your unique needs!</li>
+                        <li>3. Simply write a message to your god or goddess, select an optional sacrifice, 
                             and we will take care of the rest!</li>
                 </ul>
                 </p>
