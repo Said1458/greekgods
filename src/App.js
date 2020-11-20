@@ -1,12 +1,8 @@
-
 import React from 'react';
 import axios from 'axios';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  useParams
-} from "react-router-dom";
+
+import { Route, BrowserRouter as Router, Link } from "react-router-dom";
+
 //Components
 import Message from './Components/Message/Message';
 import Selector from './Components/Selector';
@@ -25,7 +21,7 @@ class App extends React.Component {
     this.state = {
       data: GodsArray,
       filtered: GodsArray,
-      duck: [],
+      duck: "",
       name: [],
       search: "",
       choosenGod: []
@@ -34,16 +30,16 @@ class App extends React.Component {
 
   componentDidMount() {
 
-    const headers = {
-      'Content-Type': 'text/plain'
-    };
-    const url = "http://cors-anywhere.herokuapp.com/https://random-d.uk/api/random"
+    // const headers = {
+    //   'Content-Type': 'text/plain'
+    // };
+    const url = "https://cors-anywhere.herokuapp.com/https://random-d.uk/api/random"
 
     axios
       .get(url)
       .then((response) => {
         this.setState({ duck: response.data });
-        console.log("ducks u here?", this.state.duck)
+        // console.log(this.state.duck.url)
       })
       .catch((err) => {
         console.log("error??", err);
@@ -57,6 +53,7 @@ class App extends React.Component {
     }
   }
 
+  
 
   // this is annkia's fillter function it was just moved to app
   // maybe we should add all or something to clear everything
@@ -75,12 +72,14 @@ class App extends React.Component {
 
   //this function gets thesearch from the selector component
 
+
     handleSearch(key) {
       this.setState({ search: key })
       // setTimeout(() => {
       //   console.log("timeout", this.state.search)
       // }, 1000);
     }
+
 
     // componentDidUpdate(prevSate, prevProps) {
     //   if (prevState.choosenGod !== this.state.choosenGod) {
@@ -101,6 +100,7 @@ class App extends React.Component {
 
     return (
       <Router>
+
       <div className="App">
         <Home />
         {/* <GodsList godattributes={this.state.data} /> */}
@@ -109,12 +109,14 @@ class App extends React.Component {
 
         <Route exact path="/contact/:name" render= {(props)=> <Message {...props} allGods={this.state.data} onGod={(godName) => {this.chooseGod(godName)}} />}></Route>
         <Route exact path="/select" render= {()=> <Selector godattributes={this.state.filtered} onSearch={(key) => {this.handleSearch(key)}} />}></Route>
-        <Route exact path="/contact" component={GodCard}></Route>
+        
+        <Route exact path="/ducksess" render={() => <GetADuck randomimg={this.state.duck.url} />}></Route>
       </div>
+
+
       </Router>
     )
   }
-
 }
 
 export default App;

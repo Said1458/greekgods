@@ -1,5 +1,7 @@
 import styled from 'styled-components';
-import { Route, BrowserRouter as Router,Link} from "react-router-dom";
+
+import {Link} from 'react-router-dom'
+
 
 function GodPage(props) {
     const handleSubmit = (event) => {
@@ -119,7 +121,9 @@ function GodPage(props) {
                 <Textarea /><br/>
             </FormLabels><br/>
                     
-            <Link ><Input type="submit" value="Submit" /></Link>
+
+          <Link to="/ducksess">  <Input type="submit" value="Submit and request Sacrifice" /> </Link>
+
         </GodForm>
     </>
 
