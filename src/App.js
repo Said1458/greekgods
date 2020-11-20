@@ -1,19 +1,5 @@
-// import React from "react";
-// import Home from "./Components/Home.js";
-// import './App.css';
-
-
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <Home />
-//     </div>
-    
-//   );
-// =======
 import React from 'react';
-import axios from 'axios';
+import axios from 'axios'
 import Message from './Components/Message/Message'
 import Selector from './Components/Selector';
 import { GodsArray } from './Components/InternalData.js';
