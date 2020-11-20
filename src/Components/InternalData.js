@@ -11,6 +11,7 @@ import zeus from "../Images/zeus.png";
 import aphrodite from "../Images/aphrodite.png";
 import demeter from "../Images/demeter.png";
 import tyche from "../Images/tyche.png";
+import artemis from "../Images/artemis.png"
 
 
 
