@@ -63,14 +63,14 @@ class App extends React.Component {
   }
 
   //this function gets thesearch from the selector component
-  handleSearch(key) {
-    this.setState({ search: key })
-    setTimeout(() => {
-      console.log("timeout", this.state.search)
-    }, 1000);
 
-  }
-
+    handleSearch(key) {
+      this.setState({ search: key })
+      // setTimeout(() => {
+      //   console.log("timeout", this.state.search)
+      // }, 1000);
+      
+    }
 
 
 
