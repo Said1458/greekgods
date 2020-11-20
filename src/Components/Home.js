@@ -10,6 +10,28 @@ const Description = styled.p`
     const Title=styled.h1`
     font-family:cinzel`
 
+    const Input = styled.input`
+        font-family: cinzel;
+        font-weight: bolder;
+        font-size: 16px;
+        
+        background-color: transparent;
+        border: none;
+        margin-top: 16px;
+        padding: 8px 16px;
+        
+        color: #9EFFEA;
+        border: solid 1px #9EFFEA;
+        &:hover {
+            background: #9EFFEA;
+            border: solid 1px #9EFFEA;
+            color: #1F2322;
+          }
+          &:focus {
+            outline: none;
+         }
+          `
+
 export class Home extends Component {
     render() {
         return (
@@ -22,13 +44,13 @@ export class Home extends Component {
                   
                <p> All it takes is 3 simple steps.
                     <ul>
-                        <li>Select the nature of your request.</li>
-                        <li>We will match you with the perfect god or goddess for your unique needs!</li>
-                        <li>Simply write a message to your god or goddess, select an optional sacrifice, 
+                        <li>1. Select the nature of your request.</li>
+                        <li>2. We will match you with the perfect god or goddess for your unique needs!</li>
+                        <li>3. Simply write a message to your god or goddess, select an optional sacrifice, 
                             and we will take care of the rest!</li>
                 </ul>
                 </p>
-            <Link to="/select"> <h1>Get Started</h1> </Link>
+            <Link to="/select"> <Input type="submit" value="Pray Now"/> </Link>
             </Description>
             </div>
             </>

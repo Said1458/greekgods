@@ -102,15 +102,15 @@ class App extends React.Component {
       <Router>
 
       <div className="App">
-        <Home />
+       
         {/* <GodsList godattributes={this.state.data} /> */}
         
       
 
         <Route exact path="/contact/:name" render= {(props)=> <Message {...props} allGods={this.state.data} onGod={(godName) => {this.chooseGod(godName)}} />}></Route>
         <Route exact path="/select" render= {()=> <Selector godattributes={this.state.filtered} onSearch={(key) => {this.handleSearch(key)}} />}></Route>
-        
         <Route exact path="/ducksess" render={() => <GetADuck randomimg={this.state.duck.url} />}></Route>
+        <Route exact path="/" component={Home} />
       </div>
 
 
