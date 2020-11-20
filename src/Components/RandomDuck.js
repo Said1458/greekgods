@@ -24,12 +24,13 @@ const SubTitle = styled.p`
         margin: auto;
         font-family: raleway;
     `
+    console.log("goat?", props)
 
     return(
         <div>
             <H3>Congrats, you succesfully sacrificed this duck... </H3>
             <RuningText>Our collegues are working very hard to forward your request ASAP.</RuningText>
-            <img height="400px" width="400px" src={props.randomimg} />
+            <img height="400px" width="400px" src={props.randomimg} alt="goat"/>
          
         </div>
     )
