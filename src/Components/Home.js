@@ -10,11 +10,33 @@ const Description = styled.p`
     const Title=styled.h1`
     font-family:cinzel`
 
+    const Input = styled.input`
+        font-family: cinzel;
+        font-weight: bolder;
+        font-size: 16px;
+        
+        background-color: transparent;
+        border: none;
+        margin-top: 16px;
+        padding: 8px 16px;
+        
+        color: #9EFFEA;
+        border: solid 1px #9EFFEA;
+        &:hover {
+            background: #9EFFEA;
+            border: solid 1px #9EFFEA;
+            color: #1F2322;
+          }
+          &:focus {
+            outline: none;
+         }
+          `
+
 export class Home extends Component {
     render() {
         return (
             <>
-            <div className="Container">
+            <div className="Container" >
                 <Title>TalariApp</Title>
             
             <Description>
@@ -28,8 +50,7 @@ export class Home extends Component {
                             and we will take care of the rest!</li>
                 </ul>
                 </p>
-                <br></br>
-            <Link to="/select"> <h1>Get Started</h1> </Link>
+            <Link to="/select"> <Input type="submit" value="Pray Now"/> </Link>
             </Description>
             </div>
             </>
