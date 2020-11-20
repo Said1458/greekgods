@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import styled from 'styled-components';
 import Select from 'react-select';
 import {GodsArray} from './InternalData';
 import GodsList from '../Components/GodsList';
@@ -99,18 +100,40 @@ class Selector extends React.Component {
 
     render() {
       console.log(this.props)
+
+      const customStyles = {
+        width: "50%",
+        backgroundColor: "#131515",
+        margin: "auto",
+
+        // control: () => ({
+        //   // none of react-select's styles are passed to <Control />
+        //   width: 200,
+        // }),
+        
+
+      }
+      const H2 = styled.h2`
+        font-family: cinzel;
+        font-size: 44px;
+        letter-spacing: 0.16px;
+        margin: 24px auto;
+        text-align: center;
+        color: #9EFFEA;
+    `
       return (
-          <div>
-          <div>
-        What do you need help with?
-          </div>
-        <form>
-        <Select options={optionsSorted} onChange={(event) => this.handleChange(event)}/>
+          <div style={{backgroundColor: "#131515", height:"100%" }}>
+          <H2>What do you need help with?</H2>
+          <form>
+            <div style={{width:"30%", margin:"auto"}}>
+              <Select styles={customStyles} options={optionsSorted} onChange={(event) => this.handleChange(event)}/>
+            </div>
+        
         {/* the top one works!!!! */}
-        <Select options={optionsSorted}   onChange={(event)=>{
+        {/* <Select options={optionsSorted}   onChange={(event)=>{
                console.log("event", event.value); 
                this.setState({value:event})
-              }} />
+              }} /> */}
         </form>
         <GodsList godattributes={this.props.godattributes} />
         </div>

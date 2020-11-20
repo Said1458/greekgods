@@ -41,7 +41,7 @@ function GodCard (props) {
                 <div>
                     <CardTitle>{props.name}</CardTitle>
                     <PowerText>{props.power}</PowerText>
-                    <button> I need {props.name}'s help</button>
+                    {/* <button> I need {props.name}'s help</button> */}
                 </div>
                 
             {/* <h1>{props.name}</h1> */}

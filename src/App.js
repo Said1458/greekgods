@@ -6,6 +6,7 @@ import Message from './Components/Message/Message';
 import Selector from './Components/Selector';
 import { GodsArray } from './Components/InternalData.js';
 import GodsList from './Components/GodsList';
+import Home from './Components/Home';
 import './App.css';
 
 class App extends React.Component {
@@ -80,8 +81,9 @@ class App extends React.Component {
     return (
       <Router>
       <div className="App">
-        {/* <GodsList godattributes={this.state.data} /> */}
-        <Message />
+        <Home />
+        {/* <GodsList godattributes={this.state.data} />
+        <Message /> */}
         <Selector godattributes={this.state.filtered} onSearch={(key) => {this.handleSearch(key)}} />
         <Route exact path="/contact" component={Message}></Route>
         <Route exact path="/select" render= {()=> <Selector godattributes={this.state.filtered} onSearch={(key) => {this.handleSearch(key)}} />}></Route>
