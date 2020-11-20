@@ -8,7 +8,10 @@ const Description = styled.p`
         font-family: raleway;
     `
     const Title=styled.h1`
-    font-family:cinzel`
+    font-family:cinzel;
+    font-size:58px;
+    margin-bottom: 0;
+    `
 
     const Input = styled.input`
         font-family: cinzel;
