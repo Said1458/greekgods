@@ -11,6 +11,7 @@ import zeus from "../Images/zeus.png";
 import aphrodite from "../Images/aphrodite.png";
 import demeter from "../Images/demeter.png";
 import tyche from "../Images/tyche.png";
+import artemis from "../Images/artemis.png";
 
 
 
@@ -21,21 +22,21 @@ export let GodsArray = [
         name: "Demeter",
         power: "Grain, bread, agriculture",
         symbol: "Sheaf of grain, cornucopia",
-        description:"Goddess of the harvest, she presided also over the sacred law, and the cycle of life and death"
+        description:"Goddess of the harvest, and the cycle of life and death."
     },
     {
         img: aphrodite,
         name: "Aphrodite",
         power: "Love, beauty, procreation",
         symbol: "Eros (winged godling), conch-shell",
-        description:" Greek goddess associated with love, beauty, pleasure, passion and procreation. Aphrodite's major symbols include myrtles, roses, doves, sparrows, and swans."
+        description:" Goddess associated with love, beauty, pleasure, passion and procreation. Aphrodite's major symbols include myrtles, roses, doves, sparrows, and swans."
     },
     {
         img: apollo,
         name: "Apollo",
         power: "Music, prophecy, healing, archery",
         symbol: "Lyre, bow",
-        description:"The Olympian god of prophecy and oracles, music, song and poetry, archery, healing, plague and disease, and the protection of the young. "
+        description:"The Olympian god of prophecy and oracles, music, song and poetry, archery, healing, plague and sickness, and the protection of children. "
 
     },
     {
@@ -48,7 +49,7 @@ export let GodsArray = [
     {
         img: zeus, 
         name: "Zeus",
-        power: "skies, thunder, lightning, hospitality, honor, kingship, and order",
+        power: "skies, thunder, lightning, storms, hospitality, honor, kingship, and order",
         symbol: "Thunderbolt, Aegis, Set of Scales, Oak Tree, Royal Scepter",
         description:"Zeus is the god of the sky. As the chief deity, Zeus is considered the ruler, protector, and father of all gods and humans."
     },
@@ -57,14 +58,14 @@ export let GodsArray = [
         name: "Poseidon",
         power: "sea, earthquakes, storms, and horses",
         symbol: "Trident, Fish, Dolphin, Horse and Bull",
-        description:" God of the sea, earthquakes and horses. Although he is officially one of the supreme gods of Mount Olympus, he spends most of his time in his watery domain. "
+        description:" God of the sea, storms, earthquakes and horses. Although he is officially one of the supreme gods of Mount Olympus, he spends most of his time in his watery domain. "
     },
     {
         img: hades,
         name: "Hades",
-        power: "the dead, the underworld, riches",
+        power: "the dead, the underworld, wealth",
         symbol: "cerberus, drinking horn, scepter, cypress, narcissus, key".concat,
-        description:"God of the dead and the ruler of the underworld. He is also associated with great riches, at times referred to as the god of wealth/riches. He was the oldest son of the titan Cronus and Rhea and the brother of Zeus and Poseidon."
+        description:"God of the dead and the ruler of the underworld. He is also associated with great riches, at times referred to as the god of wealth."
     },
     {
         img: hecate,
@@ -85,32 +86,35 @@ export let GodsArray = [
         img: athena, name: "Athena",
         power: "Wisdom, war, weaving, crafts",
         symbol: "Aegis, gorgoneion",
-        description:"Goddess of wisdom, war and the crafts, and favourite daughter of Zeus, Athena was, perhaps, the wisest, most courageous, and certainly the most resourceful of the Olympian gods. Zeus was told that his son would take his throne from him, just as he had taken power from his father Cronus."
+        description:"Goddess of wisdom, war, art, law, and crafts. Athena is the wisest, most courageous, and certainly the most resourceful of the Olympian gods."
     },
     {
         img: dionysus, 
         name: "Dionysus",
-        power: "Wine, festivity, madness",
+        power: "Wine, festivity, parties, madness",
         symbol:"Thyrsus (pine-cone staff)",
-        description:"is the god of the grape-harvest, winemaking and wine, of fertility, orchards and fruit, vegetation, insanity, ritual madness, religious ecstasy, festivity and theatre"
+        description:"He is the god of the grape-harvest, winemaking and wine, of fertility, orchards and fruit, vegetation, insanity, ritual madness, religious ecstasy, parties, festivity and theatre."
     },
     {
         img: hera, 
         name: "Hera",
         power:"Marriage, sky, queen of the gods",
         symbol:"Royal sceptre",
-        description:"She is the goddess of women, marriage, family and childbirth, one of the Twelve Olympians and the sister and wife of Zeus. She is the daughter of the Titans Cronus and Rhea."
+        description:"She is the goddess of women, marriage, family and childbirth, one of the Twelve Olympians and the sister and wife of Zeus."
     },
     {
         img: hermes, 
         name: "Hermes",
         power:"Herds, trade, thievery, athletics, messengers",
         symbol:"Caduceus (herald's wand)",
-        description:" He is an Olympian deity in ancient Greek religion and mythology. Hermes is considered the herald of the gods.He is also considered the protector of human heralds, travellers, thieves, merchants, and orators."
+        description: "Hermes is the messenger of the gods. He is also considered the protector of human messengrs, travellers, thieves, merchants, and orators."
     },
-
-
-
-
+    {   
+        img: artemis,
+        name:"Artemis",
+        power:"Hunting, wild animals, children",
+        symbol:"Bow and arrows",
+        description: "Artemis is the goddess of hunting, wild animals, wilderness, childbirth and virginity."
+     },
 
 ];
