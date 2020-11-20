@@ -1,6 +1,8 @@
 .container p {
     text-align: center;
     height: 100%;
+    font-family: cinzel;
+
 }
 .Container  {
     background-color: black;
@@ -10,9 +12,10 @@
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     flex-direction: column;
+    align-content: flex-end;
     
    
 }

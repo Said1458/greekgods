@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import { Route, BrowserRouter as Router,Link} from "react-router-dom";
+import { Route, BrowserRouter as Router, Link } from "react-router-dom";
 //Components
 import Message from './Components/Message/Message';
 import Selector from './Components/Selector';
@@ -68,13 +68,13 @@ class App extends React.Component {
 
   //this function gets thesearch from the selector component
 
-    handleSearch(key) {
-      this.setState({ search: key })
-      // setTimeout(() => {
-      //   console.log("timeout", this.state.search)
-      // }, 1000);
-      
-    }
+  handleSearch(key) {
+    this.setState({ search: key })
+    // setTimeout(() => {
+    //   console.log("timeout", this.state.search)
+    // }, 1000);
+
+  }
 
 
 
@@ -83,13 +83,13 @@ class App extends React.Component {
 
     return (
       <Router>
-      <div className="App">
-        {/* <GodsList godattributes={this.state.data} /> */}
-        <Home />
-        <Route exact path="/contact/:name" render= {()=> <Message picture={this.state.data.img} />}></Route>
-        <Route exact path="/select" render= {()=> <Selector godattributes={this.state.filtered} onSearch={(key) => {this.handleSearch(key)}} />}></Route>
-        <Route exact path="/contact" component={GodCard}></Route>
-      </div>
+        <div className="App">
+
+          <Route exact path="/" component={Home}></Route>
+          <Route exact path="/contact/:name" render={() => <Message picture={this.state.data.img}  />}></Route>
+          <Route exact path="/select" render={() => <Selector godattributes={this.state.filtered} onSearch={(key) => { this.handleSearch(key) }} />}></Route>
+          <Route exact path="/ducksess" render={() => <GetADuck randomimg={this.state.duck.url} />}></Route>
+        </div>
       </Router>
     )
   }
