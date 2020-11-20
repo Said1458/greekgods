@@ -41,7 +41,7 @@ function GetADuck(props){
             <br></br>
             <RuningText>Our collegues are working very hard to deliver your request to Mount Olympus.</RuningText>
             <br></br>
-            <img height="400px" width="400px" src={props.randomimg} />
+            <img width="500px" src={props.randomimg} />
          
         </StyleDiv>
     )
