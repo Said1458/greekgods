@@ -1,4 +1,3 @@
-
 import React from 'react';
 import axios from 'axios';
 import { Route, BrowserRouter as Router, Link } from "react-router-dom";
@@ -95,7 +94,6 @@ class App extends React.Component {
       </Router>
     )
   }
-
 }
 
 export default App;
