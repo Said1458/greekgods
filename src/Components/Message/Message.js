@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Route, BrowserRouter as Router,Link} from "react-router-dom";
+import GetADuck from '../../Components/RandomDuck';
+import GodPage from '../GodPage';
 
 const god =  
     {  
@@ -13,117 +15,47 @@ const god =
 
     
 
-function Massage() {
+class Massage extends React.Component {
+    constructor(props) {
+        super(props)
+    }
+
+   
+render() {
+    const Message = styled.div`
+        background-color: #131515;
+        height: 100vh;
+        color: #fff;
+        text-align: center; 
+        display: flex;
+    `
     const imageStyle = {
         width: "50%",
-        height: "400px",
-        background:`url(${god.img})`,
+        height: "93%",
+        background:`url(${this.props.picture})`,
         backgroundSize: "cover",
         backgroundPosition: "center top",
         margin: "28px 0"
     }
-
-    const Input = styled.input`
-        font-family: cinzel;
-        font-weight: bolder;
-        font-size: 16px;
-        background: #9EFFEA;
-        border: none;
-        margin: 16px;
-        padding: 8px 16px;
-        color: #1F2322;
-    `
-    const H2 = styled.h2`
-        font-family: cinzel;
-        font-size: 44px;
-        letter-spacing: 0.16px;
-        margin: 24px auto 0px;
-        text-align: center;
-        color: #9EFFEA;
-    `
-
-    const Description = styled.p`
-        max-width: 450px;
-        margin: auto;
-        font-family: raleway;
-    `
-    const Powers = styled.p`
-        max-width: 450px;
-        margin: 16px auto;
-        font-family: raleway;
-        font-weight: 700;
-    `
-    const GodForm = styled.form`
-        margin: 24px auto;
-       
-
-    `
-
-    const FormLabels = styled.label`
-        font-size: 12px;
-        text-align: left;
-        display: inline-block;
-       
-    `
-    const FormInputs = styled.input`
-        background-color: transparent;
-        font-family: raleway;s
-        font-weight: 500;
-        letter-spacing: 0.2px;
-        color: #fff;
-        border: none;
-        border-bottom: solid 1px #fff;
-        width: 70%;
-        margin: 4px auto 8px;
-        font-size: 24px;
-
-        &:focus {
-            background-color: rgba(200, 200, 200, 0.1);
-
-            outline: none;
-            
-          }
-    `
-
-
     return (
-        <div className="Message" style={{backgroundColor: "#1F2322", color: "#fff", textAlign: "center", display: "flex"}}>
+        <Message >
             <div style={imageStyle}></div>
-            <div className="wraper" style={{padding: "24px 24px 24px 4px", width: "50%"}} >
-            <H2>{god.name}</H2>
-            <hr style={{width:"20%"}} />
-            <Powers>{god.power}</Powers>
-            <Description>She is the goddess of women, marriage, family and …he is the daughter of the Titans Cronus and Rhea.</Description>
-            <div style={{margin:"auto"}}>
-                <GodForm>
-                    <FormLabels>
-                        Name:<br />
-                        <FormInputs type="text" name="name" /> 
-                    </FormLabels><br/>
-                    
-                    <FormLabels>
-                        City:<br/>
-                        <FormInputs type="text" name="name" />
-                    </FormLabels><br/>
-                    <FormLabels>
-                        Subject:<br/>
-                        <FormInputs type="text" name="name" />
-                    </FormLabels><br/>
-                    <textarea>
-                        Message
-                    </textarea><br/>
-                 <Link to="/duck"> <Input type="submit" value="Submit" /> </Link>
-                </GodForm>
-
-            </div>
+            <div className="wraper" style={{padding: "24px 24px 24px 4px", width: "50%", margin:"auto"}} >
+            <GodPage god={god} />
                 
+            {/* <GetADuck /> */}
+
 
             </div>
-            
 
-
-        </div>
+        </Message>
     );
+
+}
+
 }
 
 export default Massage;
+
+
+

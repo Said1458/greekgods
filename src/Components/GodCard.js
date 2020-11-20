@@ -36,13 +36,16 @@ function GodCard (props) {
     `
     //console.log(props)
 
+
+        
     return(
     <div className="GodCard">
             <CardImage>
                 <div>
                     <CardTitle>{props.name}</CardTitle>
                     <PowerText>{props.power}</PowerText>
-                <Link to="/contact"> <button> I need {props.name}'s help</button> </Link>
+                    
+                    <Link to={`/contact/${props.name}`}> <button> I need {props.name}'s help</button> </Link>
                 </div>
                 
             {/* <h1>{props.name}</h1> */}

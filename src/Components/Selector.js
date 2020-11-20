@@ -8,13 +8,11 @@ const options = [
     { value: 'war', label: 'war' },
     { value: 'crafts', label: 'crafts' },
     { value: 'wisdom', label: 'wisdom' },
-    { value: 'agriculture, farming', label: 'farming' },
-    { value: 'food, grain, bread', label: 'food' },
+    { value: 'agriculture', label: 'farming' },
+    { value: 'grain', label: 'food' },
     { value: 'parties, festivity', label: 'parties' },
     { value: 'wine', label: 'alcohol' },
     { value: 'madness', label: 'madness' },
-    { value: 'fire', label: 'fire' },
-    { value: 'metalworking', label: 'metalworking' },
     { value: 'marriage', label: 'marriage' },
     { value: 'trade', label: 'trade' },
     { value: 'thievery', label: 'thievery' },
@@ -22,12 +20,12 @@ const options = [
     { value: 'messengers', label: 'messages' },
     { value: 'sea', label: 'sea' },
     { value: 'earthquakes', label: 'earthquakes' },
-    { value: 'storms, skies, thunder, lightning', label: 'storms' },
+    { value: 'storms', label: 'storms' },
     { value: 'horses', label: 'horses' },
     { value: 'hospitality', label: 'hospitality' },
     { value: 'honor', label: 'honor' },
-    { value: 'fortune, riches', label: 'money' },
-    { value: 'dead, underworld', label: 'death' },
+    { value: 'wealth', label: 'wealth' },
+    { value: 'the dead', label: 'death' },
     { value: 'chance', label: 'chance' },
     { value: 'witchcraft', label: 'witchcraft' },
     { value: 'magic', label: 'magic' },
@@ -40,9 +38,14 @@ const options = [
     { value: 'courage', label: 'courage' },
     { value: 'hunting', label: 'hunting' },
     { value: 'animals', label: 'animals' },
-    { value: 'children', label: 'children' }
+    { value: 'children', label: 'children' },
+    { value: 'law', label: 'law' },
+    { value: 'travel', label: 'travel' }
+
+
   ]
 
+  
   function dynamicSort(property) {
     var sortOrder = 1;
 
@@ -87,11 +90,11 @@ class Selector extends React.Component {
   };
   
   handleChange(event) {
-    //console.log(event)
+    console.log(event)
     this.setState({ value: event.value })
-    // we don't really need a state here
+    // we don't really need the state in this componenet, i thinks
     this.props.onSearch(event.value)
-    console.log(this.state.value)
+    console.log("val", this.state.value)
   }
 
     render() {

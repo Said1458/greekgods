@@ -11,6 +11,7 @@ import Home from './Components/Home'
 //CSS
 import './App.css';
 import GetADuck from './Components/RandomDuck';
+import GodCard from './Components/GodCard';
 
 class App extends React.Component {
 
@@ -67,14 +68,14 @@ class App extends React.Component {
   }
 
   //this function gets thesearch from the selector component
-  handleSearch(key) {
-    this.setState({ search: key })
-    setTimeout(() => {
-      console.log("timeout", this.state.search)
-    }, 1000);
 
-  }
-
+    handleSearch(key) {
+      this.setState({ search: key })
+      // setTimeout(() => {
+      //   console.log("timeout", this.state.search)
+      // }, 1000);
+      
+    }
 
 
 
@@ -85,10 +86,12 @@ class App extends React.Component {
       <Router>
       <div className="App">
         {/* <GodsList godattributes={this.state.data} /> */}
-        <Route exact path="/" component={Home}></Route>
-        <Route exact path="/contact/:name" component={Message}></Route>
-        <Route exact path="/duck" component={GetADuck}></Route>
+        
+      
+
+        <Route exact path="/contact/:name" render= {()=> <Message picture={this.state.data.img} />}></Route>
         <Route exact path="/select" render= {()=> <Selector godattributes={this.state.filtered} onSearch={(key) => {this.handleSearch(key)}} />}></Route>
+        <Route exact path="/contact" component={GodCard}></Route>
       </div>
       </Router>
     )
