@@ -9,8 +9,7 @@ function GetADuck(props){
 
     const StyleDiv= styled.div`
     background-color: #131515;
-    color: #fff;
-    height:850px`
+    color: #fff;`
     
 
     const H3 = styled.h3`
@@ -21,7 +20,7 @@ function GetADuck(props){
     text-align: center;
     color: #9EFFEA;
 `
-const SubTitle = styled.p`
+    const SubTitle = styled.p`
     max-width: 450px;
     margin: 16px auto;
     font-family: raleway;
@@ -32,7 +31,9 @@ const SubTitle = styled.p`
         max-width: 450px;
         margin: auto;
         font-family: raleway;
+        font-size: 23px
     `
+    console.log("goat?", props)
 
     return(
         <StyleDiv>

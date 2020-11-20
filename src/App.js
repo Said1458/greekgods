@@ -20,7 +20,7 @@ class App extends React.Component {
     this.state = {
       data: GodsArray,
       filtered: GodsArray,
-      duck: [],
+      duck: "",
       name: [],
       search: ""
     }
@@ -28,16 +28,16 @@ class App extends React.Component {
 
   componentDidMount() {
 
-    const headers = {
-      'Content-Type': 'text/plain'
-    };
-    const url = "http://cors-anywhere.herokuapp.com/https://random-d.uk/api/random"
+    // const headers = {
+    //   'Content-Type': 'text/plain'
+    // };
+    const url = "https://cors-anywhere.herokuapp.com/https://random-d.uk/api/random"
 
     axios
       .get(url)
       .then((response) => {
         this.setState({ duck: response.data });
-        console.log("ducks u here?", this.state.duck)
+        // console.log(this.state.duck.url)
       })
       .catch((err) => {
         console.log("error??", err);
@@ -51,6 +51,7 @@ class App extends React.Component {
     }
   }
 
+  
 
   // this is annkia's fillter function it was just moved to app
   // maybe we should add all or something to clear everything
