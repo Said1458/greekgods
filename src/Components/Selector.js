@@ -90,11 +90,11 @@ class Selector extends React.Component {
   };
   
   handleChange(event) {
-    //console.log(event)
+    console.log(event)
     this.setState({ value: event.value })
-    // we don't really need a state here
+    // we don't really need the state in this componenet, i thinks
     this.props.onSearch(event.value)
-    console.log(this.state.value)
+    console.log("val", this.state.value)
   }
 
     render() {
