@@ -7,6 +7,7 @@ import Selector from './Components/Selector';
 import { GodsArray } from './Components/InternalData.js';
 import GodsList from './Components/GodsList';
 import './App.css';
+import GetADuck from './Components/RandomDuck';
 
 class App extends React.Component {
 
@@ -15,7 +16,7 @@ class App extends React.Component {
     this.state = {
       data: GodsArray,
       filtered: GodsArray,
-      duck: [],
+      duck: "",
       name: [],
       search: ""
     }
@@ -23,10 +24,10 @@ class App extends React.Component {
 
   componentDidMount() {
 
-    const headers = {
-      'Content-Type': 'text/plain'
-    };
-    const url = "http://cors-anywhere.herokuapp.com/https://random-d.uk/api/random"
+    // const headers = {
+    //   'Content-Type': 'text/plain'
+    // };
+    const url = "https://cors-anywhere.herokuapp.com/http://placegoat.com/500"
 
     axios
       .get(url)
@@ -84,11 +85,12 @@ class App extends React.Component {
         <Message />
         <Selector godattributes={this.state.filtered} onSearch={(key) => {this.handleSearch(key)}} />
         <Route exact path="/contact" component={Message}></Route>
-        <Route exact path="/select" render= {()=> <Selector godattributes={this.state.filtered} onSearch={(key) => {this.handleSearch(key)}} />}></Route>
-      </div>
+        
+    <Route exact path="/select" render= {()=> <Selector godattributes={this.state.filtered} onSearch={(key) => {this.handleSearch(key)}} />}></Route>
+    </div>
       </Router>
-    )
-  }
+    
+     ) }
 
 }
 
