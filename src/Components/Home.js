@@ -5,7 +5,7 @@ import "./Home.css";
 export class Home extends Component {
     render() {
         return (
-            <div className="Container">
+            <div className="container">
                 <h1 className="name">Talari App</h1>
                 <p>Making a request to the gods is easier than ever! 
                     <br/>
