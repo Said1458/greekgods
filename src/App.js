@@ -40,7 +40,7 @@ class App extends React.Component {
 
   // this function funs the filter only when the state changes
   componentDidUpdate(prevProps, prevState) {
-    if (prevState.search !== this.state.search) {</Route>
+    if (prevState.search !== this.state.search) {
       this.godFilter()
     }
   }
