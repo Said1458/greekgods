@@ -1,15 +1,57 @@
 import React from 'react';
+import styled from 'styled-components'
 
 
 function GodCard (props) {
 
+    const CardImage = styled.div`
+        background-image: url(${props.img});
+        background-size: cover;
+        height: 400px;
+        width: 300px;
+        border: none;
+        margin: 16px;
+
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding: 16px;
+
+    `
+    const CardTitle = styled.h2`
+        text-shadow: 0px 0px 10px #000;
+        font-family: cinzel;
+        letter-spacing: 0.3px;
+        color: #fff;
+        margin: auto;
+    `
+
+    const PowerText = styled.p`
+        font-family: raleway;
+        color: #fff;
+        text-shadow: 0px 0px 10px #000;
+        margin: 0px auto;
+        font-weight: 500;
+    `
+    //console.log(props)
+
     return(
-    <div>
-        <h1>{props.name}</h1>
-        <img src={props.img} />
-        <h2>Powers: {props.power}</h2>
-        <h2>symbol: {props.symbol}</h2>
-    </div> 
+    <div className="GodCard">
+            <CardImage>
+                <div>
+                    <CardTitle>{props.name}</CardTitle>
+                    <PowerText>{props.power}</PowerText>
+                    <button> I need {props.name}'s help</button>
+                </div>
+                
+            {/* <h1>{props.name}</h1> */}
+            
+            </CardImage>
+            {/* <div style={{width: "400px", height: "300px",  backgroundSize: "cover", backgroundImage: `url(${props.img})`}}>
+            <h1>{props.name}</h1>
+            </div> */}
+    </div>
+
     )
 }
 
