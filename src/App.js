@@ -63,9 +63,9 @@ class App extends React.Component {
   //this function gets thesearch from the selector component
     handleSearch(key) {
       this.setState({ search: key })
-      setTimeout(() => {
-        console.log("timeout", this.state.search)
-      }, 1000);
+      // setTimeout(() => {
+      //   console.log("timeout", this.state.search)
+      // }, 1000);
       
     }
 
@@ -79,7 +79,7 @@ class App extends React.Component {
       <div className="App">
         {/* <GodsList godattributes={this.state.data} /> */}
         <Message />
-        {/* <Selector godattributes={this.state.filtered} onSearch={(key) => {this.handleSearch(key)}} /> */}
+        <Selector godattributes={this.state.filtered} onSearch={(key) => {this.handleSearch(key)}} />
       </div>
     )
   }
