@@ -79,7 +79,7 @@ class App extends React.Component {
       <div className="App">
         {/* <GodsList godattributes={this.state.data} /> */}
         <Message />
-        <Selector godattributes={this.state.filtered} onSearch={(key) => {this.handleSearch(key)}} />
+        {/* <Selector godattributes={this.state.filtered} onSearch={(key) => {this.handleSearch(key)}} /> */}
       </div>
     )
   }
