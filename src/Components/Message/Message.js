@@ -1,5 +1,6 @@
 import React from 'react';
-import styled from 'styled-components'
+import styled from 'styled-components';
+import { Route, BrowserRouter as Router,Link} from "react-router-dom";
 
 const god =  
     {  
@@ -66,7 +67,7 @@ function Massage() {
     `
     const FormInputs = styled.input`
         background-color: transparent;
-        font-family: raleway;
+        font-family: raleway;s
         font-weight: 500;
         letter-spacing: 0.2px;
         color: #fff;
@@ -111,7 +112,7 @@ function Massage() {
                     <textarea>
                         Message
                     </textarea><br/>
-                    <Input type="submit" value="Submit" />
+                 <Link to="/duck"> <Input type="submit" value="Submit" /> </Link>
                 </GodForm>
 
             </div>

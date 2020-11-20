@@ -2,11 +2,15 @@
 import React from 'react';
 import axios from 'axios';
 import { Route, BrowserRouter as Router,Link} from "react-router-dom";
+//Components
 import Message from './Components/Message/Message';
 import Selector from './Components/Selector';
 import { GodsArray } from './Components/InternalData.js';
 import GodsList from './Components/GodsList';
+import Home from './Components/Home'
+//CSS
 import './App.css';
+import GetADuck from './Components/RandomDuck';
 
 class App extends React.Component {
 
@@ -81,7 +85,9 @@ class App extends React.Component {
       <Router>
       <div className="App">
         {/* <GodsList godattributes={this.state.data} /> */}
-        <Route exact path="/contact" component={Message}></Route>
+        <Route exact path="/" component={Home}></Route>
+        <Route exact path="/contact/:name" component={Message}></Route>
+        <Route exact path="/duck" component={GetADuck}></Route>
         <Route exact path="/select" render= {()=> <Selector godattributes={this.state.filtered} onSearch={(key) => {this.handleSearch(key)}} />}></Route>
       </div>
       </Router>
