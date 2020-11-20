@@ -17,36 +17,11 @@ export class Home extends Component {
                             and     we will take care of the rest!</li>
                 </ul>
                 </p>
-                <Button/>
+                <button>See more</button>
+
             </div>
         )
     }
 }
-
-
- class Button extends Component {
-     state ={
-         loading: false
-     }
-
-     handleFetch = () => {
-         this.state({loading: true})
-     }
-    render() {
-        const {loading} =  this.state;
-        return (
-            <div style={{marginTop: '60px'}}>
-                <button className="button" onClick={this.handleFetch} disabled={loading}>
-                    {loading && <i className="large-button"></i>}
-                    See more
-
-
-                </button>
-                
-            </div>
-        )
-    }
-}
-
 
 export default Home;
